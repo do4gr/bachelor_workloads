@@ -1,0 +1,45 @@
+{
+    "name": "prisma",
+    "description": "System Running Prisma GraphQL API On Top Of Postgres",
+    "machines": [
+        {
+            "provider": "Hetzner",
+            "address": "159.69.177.132",
+            "id": "2610412",
+            "auth": "",
+            "budget": 10.5,
+            "services": [
+                {
+                    "service": "prometheus",
+                    "port": 9100,
+                    "path": ""
+                },
+                {
+                    "service": "postgres",
+                    "port": 5432,
+                    "path": ""
+                }
+            ]
+        },
+        {
+            "provider": "Hetzner",
+            "address": "159.69.177.132",
+            "id": "2610412",
+            "auth": "",
+            "size": 1,
+            "budget": 10.5,
+            "services": [
+                {
+                    "service": "prometheus",
+                    "port": 9100,
+                    "path": ""
+                },
+                {
+                    "service": "prisma",
+                    "port": 4466,
+                    "path": "/"
+                }
+            ]
+        }
+    ]
+}

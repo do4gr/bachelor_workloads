@@ -1,0 +1,25 @@
+{
+    "name": "neo4j",
+    "description": "system running Neo4j GraphQL API",
+    "machines": [
+        {
+            "provider": "",
+            "address": "159.69.177.132",
+            "id": "2610412",
+            "auth": "",
+            "budget": 10.5,
+            "services": [
+                {
+                    "service": "prometheus",
+                    "port": 9100,
+                    "path": ""
+                },
+                {
+                    "service": "neo4j",
+                    "port": 7474,
+                    "path": "/graphql/"
+                }
+            ]
+        }   
+    ]
+}

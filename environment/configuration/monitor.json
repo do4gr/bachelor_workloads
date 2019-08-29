@@ -1,0 +1,25 @@
+{
+    "name": "pgProm",
+    "description": "monitoring instance",
+    "machines": [
+        {
+            "provider": "",
+            "address": "159.69.177.132",
+            "id": "2610412",
+            "auth": "",
+            "budget": 10.5,
+            "services": [
+                {
+                    "service": "prometheus",
+                    "port": 9100,
+                    "path": ""
+                },
+                {
+                    "service": "grafana",
+                    "port": 9100,
+                    "path": ""
+                }
+            ]
+        }
+    ]
+}

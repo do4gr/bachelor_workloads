@@ -1,0 +1,18 @@
+# load
+load.host
+load.port
+load.size
+
+# monitor
+monitor.host
+monitor.port
+monitor.size
+
+# sut
+candidate.db.host
+candidate.db.port
+candidate.db.size
+candidate.api.host
+candidate.api.port
+candidate.api.size
+

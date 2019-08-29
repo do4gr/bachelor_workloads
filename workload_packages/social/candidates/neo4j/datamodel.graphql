@@ -1,0 +1,61 @@
+type User {
+    id: ID!
+    firstName: String
+    lastName: String
+    email: String
+    password: String
+    createdAt: String
+    posts: [Post] @relation(name:"UserToPost", direction: IN)
+    comments: [Comment] @relation(name:"UserToComment", direction: IN)
+    likes: [Like] @relation(name:"UserToLike", direction: IN)
+    friendWith: [User] @relation(name:"FriendShip", direction: IN)
+    friendOf: [User] @relation(name:"FriendShip")
+    groups: [Group] @relation(name:"UserToGroup", direction: IN)
+    events: [Event] @relation(name:"UserToEvent", direction: IN)
+}
+
+type Post {
+    id: ID! @id
+    content: String
+    date: String
+    author: User @relation(name:"UserToPost")
+    comments: [Comment] @relation(name:"PostToComment", direction: IN)
+    likes: [Like] @relation(name:"PostToLike", direction: IN)
+}
+
+type Comment {
+    id: ID! @id
+    content: String
+    date: String
+    author: User @relation(name:"UserToComment")
+    post: Post @relation(name:"PostToComment")
+    likes: [Like] @relation(name:"CommentToLike", direction: IN)
+}
+
+type Like {
+    id: ID! @id
+    date: String
+    user: User @relation(name:"UserToLike")
+    post: Post @relation(name:"PostToLike")
+    comment: Comment @relation(name:"CommentToLike")
+    group: Group @relation(name:"GroupToLike")
+    event: Event @relation(name:"EventToLike")
+}
+
+type Group {
+    id: ID! @id
+    topic: String!
+    description: String
+    members: [User] @relation(name:"UserToGroup")
+    likes: [Like] @relation(name:"GroupToLike", direction: IN)
+}
+
+type Event{
+    id: ID! @id
+    name: String!
+    description: String
+    location: String
+    date: String
+    attendees: [User] @relation(name:"UserToEvent")
+    likes: [Like] @relation(name:"EventToLike", direction: IN)
+}

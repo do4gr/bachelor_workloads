@@ -1,0 +1,16 @@
+Abstract size descriptions?????
+
+s m l xl xxl ??????  cores ram ??  budget % 
+
+----------------------------------
+setup
+    first load this folder to all machines
+    then run the specific setup script
+
+
+    ~/bachelor_toolkit# ~/bachelor_workloads/workload_packages/social/candidates/prisma/
+
+
+    ./bin/ycsb run prisma -s -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ./neo4j/src/main/java/com/yahoo/ycsb/webservice/prisma/social/target.classes > prisma.log
+    ./bin/ycsb run neo4j -s -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_neo4j -cp ./neo4j/src/main/java/com/yahoo/ycsb/webservice/neo4j/social/target.classes > neo.log
+    ~/bachelor_workloads/workload_packages/social/candidates/prisma_postgres/load.sh

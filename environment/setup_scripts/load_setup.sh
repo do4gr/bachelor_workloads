@@ -10,8 +10,4 @@ sudo apt install default-jdk
 
 apt install maven
 
-get experiments folder over there
-
-mvn -DskipTests package dependency:build=classpath
-
 mvn clean install

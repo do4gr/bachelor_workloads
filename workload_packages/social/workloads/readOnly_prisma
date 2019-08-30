@@ -47,11 +47,7 @@ operationcount=10000
 maxexecutiontime=720
 
 # Properties changed only by CLI
-db=com.yahoo.ycsb.webservice.neo4j.social.Neo4jClient
-http.endpoint=http://localhost:7474/graphql/
+db=com.yahoo.ycsb.webservice.prisma.social.PrismaClient
+http.endpoint=http://116.203.126.245:4466/
 headers=Content-Type application/json
 table=user
-
-# commands just stored here
-./bin/ycsb run neo4j -s -P /Users/matthias/bachtool/bachelor_toolkit/workloads/workload_social_neo4j -cp /Users/matthias/bachtool/bachelor_toolkit/neo4j/src/main/java/com/yahoo/ycsb/webservice/neo4j/target.classes  > run.log
-./bin/ycsb load neo4j -s -P /Users/matthias/bachtool/bachelor_toolkit/workloads/workload_social_neo4j -cp /Users/matthias/bachtool/bachelor_toolkit/neo4j/src/main/java/com/yahoo/ycsb/webservice/neo4j/target.classes -p table=user > run.log

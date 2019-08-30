@@ -1,0 +1,9 @@
+#!/bin/bash
+# has to be called from ~/bachelor_toolkit/ 
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=user -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=post -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=comment -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=like -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=group -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=event -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes
+~/bachelor_toolkit/bin/ycsb load prisma -s -p table=friends -P ~/bachelor_workloads/workload_packages/social/workloads/readOnly_prisma -cp ~bachelor_toolkit/prisma/src/main/java/com/yahoo/ycsb/webservice/prisma/target.classes

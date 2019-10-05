@@ -1,13 +1,9 @@
 # bachelor_workloads
 
-Abstract size descriptions?????
+prom        159.69.177.132
 
-s m l xl xxl ??????  cores ram ??  budget % 
+pgPost      116.203.77.116
+pgApi       116.203.126.245
+pgneo       116.203.217.237
 
-----------------------------------
-setup
-    first load this folder to all machines
-    then run the specific setup script
-
-all use docker
-so machines can share setup script to install docker and prom and then just spin up containers
+pgClient    159.69.189.78

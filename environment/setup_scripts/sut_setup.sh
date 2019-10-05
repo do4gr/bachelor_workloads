@@ -11,6 +11,22 @@ apt  install docker-compose
 git clone https://github.com/do4gr/bachelor_workloads.git
 
 
+# cAdvisor
+sudo docker run \
+  --volume=/:/rootfs:ro \
+  --volume=/var/run:/var/run:ro \
+  --volume=/sys:/sys:ro \
+  --volume=/var/lib/docker/:/var/lib/docker:ro \
+  --volume=/dev/disk/:/dev/disk:ro \
+  --publish=8080:8080 \
+  --detach=true \
+  --name=cadvisor \
+  google/cadvisor:latest
+
+# fetch workload repo
+git clone https://github.com/do4gr/bachelor_workloads.git
+
+
 # these two belong in the api maybe need to be adjusted there
 sudo docker build -t neo4j_graphql:latest  -f ~/bachelor_workloads/workload_packages/social/candidates/neo4j/Dockerfile .
 

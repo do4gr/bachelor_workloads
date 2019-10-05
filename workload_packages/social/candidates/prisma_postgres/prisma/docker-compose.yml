@@ -13,7 +13,7 @@ services:
         databases:
           default:
             connector: postgres
-            host: 88.198.148.212
+            host: 78.46.186.209
             database: api
             schema: public
             user: prisma
